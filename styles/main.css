@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 1.6rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  background-color: #7477bf;
+  color: #ffffff;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+  font-size: 1.75rem;
+}
+
+span {
+  font-weight: 600;
+}
+
+.header-left-side {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+}
+
+.bell {
+  fill: white;
+}
+
+.vertical-line {
+  font-size: 3.5rem;
+  color: #8c8fb8;
+  width: 0.5rem;
+}
+
+img {
+  width: 3.5rem;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 1.25rem;
+}
+
