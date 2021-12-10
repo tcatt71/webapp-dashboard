@@ -114,4 +114,10 @@ section {
   border-bottom: solid #ccc 0.1rem;
 }
 
+h2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 }
