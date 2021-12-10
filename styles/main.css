@@ -72,5 +72,17 @@ ul {
   display: flex;
   justify-content: space-evenly;
   width: 28rem;
-  height: 3.5rem;
+  height: 3rem;
+}
+
+li {
+  display: flex;
+}
+
+a {
+  display: flex;
+}
+
+a img {
+  width: 3rem;
 }
