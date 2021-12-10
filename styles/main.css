@@ -86,3 +86,24 @@ a {
 a img {
   width: 3rem;
 }
+
+.tab-bar {
+  display: flex;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10.7rem;
+  height: 5.5rem;
+  font-weight: bold;
+}
+
+.no-tabs-space {
+  width: calc(100% - 10.7rem);
+  height: 5.5rem;
+  background-color: #f7f7f7;
+  border-left: solid #cccccc 0.1rem;
+  border-bottom: solid #cccccc 0.1rem;
+}
