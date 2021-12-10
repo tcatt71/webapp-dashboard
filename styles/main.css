@@ -10,6 +10,7 @@
 body {
   font-family: 'Martel Sans', sans-serif;
   font-size: 1.6rem;
+  font-weight: 200;
 }
 
 header {
@@ -29,7 +30,7 @@ header {
 }
 
 span {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .header-left-side {
