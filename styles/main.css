@@ -108,4 +108,10 @@ a img {
   border-left: solid #ccc 0.1rem;
   border-bottom: solid #ccc 0.1rem;
 }
+
+section {
+  padding: 1.5rem;
+  border-bottom: solid #ccc 0.1rem;
+}
+
 }
