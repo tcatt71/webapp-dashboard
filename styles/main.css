@@ -95,10 +95,9 @@ a img {
 
 .tab {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 10.7rem;
   height: 5.5rem;
+  padding: 0 1.5rem;
   font-weight: bold;
 }
 
