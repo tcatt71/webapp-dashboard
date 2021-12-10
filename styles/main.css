@@ -120,4 +120,18 @@ h2 {
   font-weight: bold;
 }
 
+.alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background-color: var(--color-secondary);
+  height: 3.5rem;
+  padding: 0 1.5rem;
+  margin: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.alert p:first-child {
+  font-weight: 400;
 }
