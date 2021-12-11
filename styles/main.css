@@ -97,7 +97,7 @@ a img {
   display: flex;
   align-items: center;
   height: 5.5rem;
-  padding: 0 1.5rem;
+  padding: 0 1.6rem;
   font-weight: bold;
 }
 
@@ -110,7 +110,7 @@ a img {
 }
 
 section {
-  padding: 1.5rem;
+  padding: 1.6rem;
   border-bottom: solid #ccc 0.1rem;
 }
 
@@ -127,8 +127,8 @@ h2 {
   color: #fff;
   background-color: var(--color-secondary);
   height: 3.5rem;
-  padding: 0 1.5rem;
-  margin: 1.5rem;
+  padding: 0 1.6rem;
+  margin: 1.6rem;
   border-radius: 0.5rem;
 }
 
