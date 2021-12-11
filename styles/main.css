@@ -101,19 +101,18 @@ main {
 
 .tab-bar {
   display: flex;
+  height: 5rem;
 }
 
 .tab {
   display: flex;
   align-items: center;
-  height: 5.5rem;
   padding: 0 1.6rem;
   font-weight: bold;
 }
 
 .no-tabs-space {
   width: calc(100% - 10.7rem);
-  height: 5.5rem;
   background-color: #f7f7f7;
   border-left: solid #ccc 0.1rem;
   border-bottom: solid #ccc 0.1rem;
