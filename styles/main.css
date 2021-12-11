@@ -19,10 +19,6 @@ body {
   font-weight: 200;
 }
 
-main {
-  grid-area: main;
-}
-
 header {
   grid-area: header;
   display: flex;
@@ -97,6 +93,10 @@ a {
 
 a img {
   width: 3rem;
+}
+
+main {
+  grid-area: main;
 }
 
 .tab-bar {
