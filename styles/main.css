@@ -123,6 +123,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.4rem;
   color: #fff;
   background-color: var(--color-secondary);
   height: 3.5rem;
