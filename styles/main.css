@@ -119,17 +119,6 @@ main {
   border-bottom: solid #ccc 0.1rem;
 }
 
-section {
-  padding: 1.6rem;
-  border-bottom: solid #ccc 0.1rem;
-}
-
-h2 {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
 .alert {
   display: flex;
   justify-content: space-between;
@@ -144,4 +133,15 @@ h2 {
 
 .alert p:first-child {
   font-weight: 400;
+section {
+  padding: 1.6rem;
+  border-bottom: solid #ccc 0.1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 }
