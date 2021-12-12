@@ -106,7 +106,6 @@ main {
 }
 
 .tab {
-  display: flex;
   align-items: center;
   padding: 0 1.6rem;
   font-weight: bold;
