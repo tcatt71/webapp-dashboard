@@ -133,6 +133,8 @@ main {
 
 .alert p:first-child {
   font-weight: 400;
+}
+
 section {
   padding: 1.6rem;
   border-bottom: solid #ccc 0.1rem;
