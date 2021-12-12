@@ -146,4 +146,60 @@ h2 {
   font-weight: bold;
 }
 
+@media screen and (min-width: 48em) {
+  body {
+    grid-template-rows: 7rem 1fr;
+    grid-template-columns: 7rem 1fr;
+    grid-template-areas:
+      "header header"
+      "nav main";
+  }
+
+  ul {
+    flex-direction: column;
+    width: unset;
+    height: 20rem;
+    margin-top: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .widgets {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .traffic,
+  .social-stats,
+  .new-members,
+  .recent-activity,
+  .message-user,
+  .settings {
+    width: 100%;
+  }
+
+  .daily-traffic {
+    width: 50%;
+  }
+  .mobile-users {
+    width: 50%;
+    border-left: solid #ccc 0.1rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .new-members,
+  .recent-activity,
+  .message-user,
+  .settings {
+    width: 50%;
+  }
+
+  .recent-activity,
+  .settings {
+    border-left: solid #ccc 0.1rem;
+  }
 }
