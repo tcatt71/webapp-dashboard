@@ -48,7 +48,13 @@ span {
 
 .bell {
   fill: #fff;
-  height: 2rem;
+  width: 2.07rem;
+  cursor: pointer;
+  transition: all .2s ease-out;
+}
+
+.bell:hover {
+  transform: scale(1.2);
 }
 
 img {
