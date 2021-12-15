@@ -46,9 +46,16 @@ span {
   width: 19rem;
 }
 
+.bell-wrapper {
+  display: flex;
+  height: 3.75rem;
+  padding-right: 1.75rem;
+  border-right: solid #8c8fb8 0.2rem;
+}
+
 .bell {
   fill: #fff;
-  width: 2.07rem;
+  width: 2.125rem;
   cursor: pointer;
   transition: all .2s ease-out;
 }
