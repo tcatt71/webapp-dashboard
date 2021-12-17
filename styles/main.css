@@ -54,6 +54,7 @@ span {
   position: absolute;
   top: 0.2rem;
   right: 1.5rem;
+  transition: all .2s ease-out;
 }
 
 .bell-wrapper {
