@@ -67,12 +67,16 @@ span {
 .bell {
   fill: #fff;
   width: 2.125rem;
+  stroke: #fff;
   cursor: pointer;
+  stroke-width: unset;
   transition: all .2s ease-out;
 }
 
 .bell:hover {
-  transform: scale(1.2);
+  stroke: #fff;
+  stroke-width: 3;
+  transform: scale(1.1);
 }
 
 img {
