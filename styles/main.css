@@ -158,6 +158,10 @@ main {
   border-radius: 0.5rem;
 }
 
+strong {
+  font-weight: 400;
+}
+
 .close-button {
   display: flex;
   justify-content: center;

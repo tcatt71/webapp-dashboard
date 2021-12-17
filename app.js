@@ -1,9 +1,9 @@
-const closeAlertButton = document.querySelector('.close-button');
+const closeAlertButton = document.querySelector('.js-close-button');
 const notificationsLight = document.querySelector('.js-notifications-light');
 const bellIcon = document.querySelector('.js-bell');
 
 closeAlertButton.addEventListener('click', () => {
-  const alert = document.querySelector('.alert');
+  const alert = document.querySelector('.js-alert');
   alert.style.display = 'none';
 });
 
