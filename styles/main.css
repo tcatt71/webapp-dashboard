@@ -182,6 +182,21 @@ h2 {
   font-weight: bold;
 }
 
+.traffic-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 28rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+
+.traffic-nav li {
+  padding: 1rem;
+  border-radius: 1.8rem;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 48em) {
   body {
     grid-template-rows: 7rem 1fr;
