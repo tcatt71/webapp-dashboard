@@ -46,11 +46,22 @@ span {
   width: 20rem;
 }
 
+.notifications-light {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #90ee90;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.2rem;
+  right: 1.5rem;
+}
+
 .bell-wrapper {
   display: flex;
   height: 3.75rem;
   padding-right: 1.75rem;
   border-right: solid #8c8fb8 0.1rem;
+  position: relative;
 }
 
 .bell {
