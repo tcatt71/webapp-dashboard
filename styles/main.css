@@ -103,7 +103,7 @@ nav {
   background-color: #4d4c72;
 }
 
-ul {
+.main-nav {
   display: flex;
   justify-content: space-between;
   width: 22rem;
@@ -186,7 +186,7 @@ h2 {
       "nav main";
   }
 
-  ul {
+  .main-nav {
     flex-direction: column;
     width: unset;
     height: 20rem;
