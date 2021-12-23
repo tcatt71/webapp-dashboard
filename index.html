@@ -42,15 +42,15 @@
 
   <nav>
     <ul class="main-nav">
-      <li><a href=""><img src="svgs/home.svg" alt=""></a></li>
-      <li><a href=""><img src="svgs/bar-chart.svg" alt=""></a></li>
-      <li><a href=""><img src="svgs/members.svg" alt=""></a></li>
-      <li><a href=""><img src="svgs/settings.svg" alt=""></a></li>
+      <li><a href="#dashboard"><img src="svgs/home.svg" alt=""></a></li>
+      <li><a href="#visits"><img src="svgs/bar-chart.svg" alt=""></a></li>
+      <li><a href="#members"><img src="svgs/members.svg" alt=""></a></li>
+      <li><a href="#settings"><img src="svgs/settings.svg" alt=""></a></li>
     </ul>
   </nav>
 
   <main>
-    <div class="tab-bar">
+    <div id="dashboard" class="tab-bar">
       <h1 class="tab">Dashboard</h1>
       <div class="no-tabs-space"></div>
     </div>
@@ -63,7 +63,7 @@
     </div>
 
     <div class="widgets">
-      <section class="traffic">
+      <section id="visits" class="traffic">
         <H2>Traffic</H2>
         <ul class="traffic-nav">
           <li>Hourly</li>
@@ -97,7 +97,7 @@
         </div>
       </section>
 
-      <section class="new-members">
+      <section id="members" class="new-members">
         <h2>New Members</h2>
         <div>
           <canvas></canvas>
@@ -118,7 +118,7 @@
         </div>
       </section>
 
-      <section class="settings">
+      <section id="settings" class="settings">
         <h2>Settings</h2>
         <div>
           <canvas></canvas>
