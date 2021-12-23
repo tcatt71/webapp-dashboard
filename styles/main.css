@@ -192,9 +192,14 @@ h2 {
 }
 
 .traffic-nav li {
-  padding: 1rem;
+  padding: 0.8rem 1rem;
   border-radius: 1.8rem;
   cursor: pointer;
+}
+
+.traffic-nav-selected {
+  color: #fff;
+  background-color: #81c98f;
 }
 
 @media screen and (min-width: 48em) {
