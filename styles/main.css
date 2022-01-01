@@ -22,34 +22,26 @@ body {
 header {
   grid-area: header;
   display: flex;
-  justify-content: space-between;
+  column-gap: 1rem;
   align-items: center;
   background-color: var(--color-secondary);
   color: #fff;
+  padding: 0 1rem;
 }
 
 .logo {
-  display: flex;
-  justify-content: center;
-  width: 11.5rem;
   font-size: 2rem;
+  margin-right: auto;
 }
 
 span {
   font-weight: 400;
 }
 
-.header-left-side {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 20rem;
-}
-
 .bell-wrapper {
   display: flex;
-  height: 3.75rem;
-  padding-right: 1.75rem;
+  height: 3.5rem;
+  padding-right: 1.5rem;
   border-right: solid #8c8fb8 0.1rem;
   position: relative;
 }
@@ -61,13 +53,13 @@ span {
   border-radius: 50%;
   position: absolute;
   top: 0.2rem;
-  right: 1.5rem;
+  right: 1.125rem;
   transition: all .2s ease-out;
 }
 
 .bell {
   fill: #fff;
-  width: 2.125rem;
+  width: 2rem;
   stroke: #fff;
   cursor: pointer;
   stroke-width: unset;
@@ -81,11 +73,11 @@ span {
 }
 
 img {
-  width: 3.75rem;
+  width: 3.5rem;
 }
 
 .avatar-container {
-  height: 3.75rem;
+  height: 3.5rem;
 }
 
 .avatar {
@@ -93,7 +85,7 @@ img {
 }
 
 .user-name {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 nav {
@@ -107,7 +99,7 @@ nav {
 .main-nav {
   display: flex;
   justify-content: space-between;
-  width: 22rem;
+  width: 21rem;
   height: 3rem;
 }
 
