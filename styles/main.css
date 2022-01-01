@@ -174,6 +174,11 @@ h2 {
   font-weight: bold;
 }
 
+canvas {
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
 .traffic-nav {
   display: flex;
   justify-content: space-between;
@@ -192,6 +197,7 @@ h2 {
 .traffic-nav-selected {
   color: #fff;
   background-color: #81c98f;
+  transition: all .15s linear;
 }
 
 @media screen and (min-width: 48em) {

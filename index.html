@@ -57,15 +57,13 @@
     <div class="widgets">
       <section id="visits" class="traffic">
         <H2>Traffic</H2>
-        <ul class="traffic-nav">
+        <ul class="traffic-nav js-traffic-nav">
           <li class="traffic-nav-selected">Hourly</li>
           <li>Daily</li>
           <li>Weekly</li>
           <li>Monthly</li>
         </ul>
-        <div>
-          <canvas></canvas>
-        </div>
+        <canvas id="js-traffic-chart"></canvas>
       </section>
 
       <section class="daily-traffic">
@@ -118,6 +116,9 @@
       </section>
     </div>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"
+    integrity="sha512-tMabqarPtykgDtdtSqCL3uLVM0gS1ZkUAVhRFu1vSEFgvB73niFQWJuvviDyBGBH22Lcau4rHB5p2K2T0Xvr6Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="app.js"></script>
 </body>
 
