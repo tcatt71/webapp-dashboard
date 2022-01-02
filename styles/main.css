@@ -179,13 +179,20 @@ canvas {
   margin-top: 2rem;
 }
 
+.traffic-title-and-nav-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.traffic-title {
+  margin-bottom: 0.35rem;
+}
+
 .traffic-nav {
   display: flex;
-  justify-content: space-between;
-  width: 28rem;
+  gap: 0 0.2rem;
   font-size: 1.4rem;
   font-weight: 400;
-  margin: 0.5rem 0;
 }
 
 .traffic-nav li {
@@ -237,6 +244,16 @@ canvas {
   .message-user,
   .settings {
     width: 100%;
+  }
+
+  .traffic-title-and-nav-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .traffic-title {
+    margin-bottom: 0;
   }
 
   .daily-traffic {
