@@ -54,7 +54,7 @@ span {
   position: absolute;
   top: 0.2rem;
   right: 1.125rem;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .bell {
@@ -63,7 +63,7 @@ span {
   stroke: #fff;
   cursor: pointer;
   stroke-width: unset;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .bell:hover {
@@ -197,7 +197,7 @@ canvas {
 .traffic-nav-selected {
   color: #fff;
   background-color: #81c98f;
-  transition: all .15s linear;
+  transition: all 0.15s linear;
 }
 
 @media screen and (min-width: 48em) {
