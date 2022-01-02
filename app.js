@@ -50,7 +50,7 @@ const trafficConfig = {
 const trafficChart = new Chart(trafficCanvas, trafficConfig);
 
 closeAlertButton.addEventListener('click', () => {
-  const alert = document.querySelector('.js-alert');
+  const alert = document.querySelector('.js-alerts-bar');
   alert.style.display = 'none';
 });
 
