@@ -4,6 +4,7 @@ const bellIcon = document.querySelector('.js-bell');
 const trafficNavigation = document.querySelector('.js-traffic-nav');
 const trafficCanvas = document.querySelector('#js-traffic-chart');
 const dailyTrafficCanvas = document.querySelector('#js-daily-traffic-chart');
+const mobileUsersCanvas = document.querySelector('.js-mobile-users');
 
 trafficNavigation.addEventListener('click', (e) => {
   const trafficNavOptions = document.querySelectorAll('.js-traffic-nav li');
@@ -76,8 +77,40 @@ const dailyTrafficConfig = {
   }
 };
 
+const mobileUsersLabels = ['Desktop', 'Tablet', 'Phones'];
+
+const mobileUsersData = {
+  labels: mobileUsersLabels,
+  datasets: [{
+    label: '# of Users',
+    data: [2000, 550, 500],
+    borderWidth: 0,
+    backgroundColor: ['#7477bf', '#81c98f', '#51b6c8']
+  }]
+};
+
+const mobileUsersConfig = {
+  type: 'doughnut',
+  data: mobileUsersData,
+  options: {
+    aspectRatio: 1.9,
+    plugins: {
+      legend: {
+        position: 'right',
+        labels: {
+          boxWidth: 20,
+          font: {
+            weight: 'bold'
+          }
+        }
+      }
+    }
+  }
+};
+
 new Chart(trafficCanvas, trafficConfig);
 new Chart(dailyTrafficCanvas, dailyTrafficConfig);
+new Chart(mobileUsersCanvas, mobileUsersConfig);
 
 closeAlertButton.addEventListener('click', () => {
   const alert = document.querySelector('.js-alerts-bar');
