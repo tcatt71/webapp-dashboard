@@ -47,7 +47,6 @@ const trafficConfig = {
   }
 };
 
-const trafficChart = new Chart(trafficCanvas, trafficConfig);
 const dailyTrafficLabels = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
 const dailyTrafficData = {
@@ -77,6 +76,7 @@ const dailyTrafficConfig = {
   }
 };
 
+new Chart(trafficCanvas, trafficConfig);
 new Chart(dailyTrafficCanvas, dailyTrafficConfig);
 
 closeAlertButton.addEventListener('click', () => {
