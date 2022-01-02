@@ -30,7 +30,6 @@ const trafficConfig = {
   type: 'line',
   data: trafficData,
   options: {
-    backgroundColor: '#d5d6ec',
     fill: true,
     aspectRatio: 2.5,
     scales: {
