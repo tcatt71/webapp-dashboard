@@ -3,6 +3,7 @@ const notificationsLight = document.querySelector('.js-notifications-light');
 const bellIcon = document.querySelector('.js-bell');
 const trafficNavigation = document.querySelector('.js-traffic-nav');
 const trafficCanvas = document.querySelector('#js-traffic-chart');
+const dailyTrafficCanvas = document.querySelector('#js-daily-traffic-chart');
 
 trafficNavigation.addEventListener('click', (e) => {
   const trafficNavOptions = document.querySelectorAll('.js-traffic-nav li');
@@ -47,6 +48,36 @@ const trafficConfig = {
 };
 
 const trafficChart = new Chart(trafficCanvas, trafficConfig);
+const dailyTrafficLabels = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+
+const dailyTrafficData = {
+  labels: dailyTrafficLabels,
+  datasets: [{
+    label: '# of Hits',
+    data: [75, 115, 175, 125, 225, 200, 100],
+    backgroundColor: '#7477bf',
+    borderWidth: 1
+  }]
+};
+
+const dailyTrafficConfig = {
+  type: 'bar',
+  data: dailyTrafficData,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    },
+    plugins: {
+      legend: {
+        display: false
+      },
+    },
+  }
+};
+
+new Chart(dailyTrafficCanvas, dailyTrafficConfig);
 
 closeAlertButton.addEventListener('click', () => {
   const alert = document.querySelector('.js-alerts-bar');
