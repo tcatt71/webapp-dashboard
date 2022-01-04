@@ -80,7 +80,8 @@ img {
   height: 3.5rem;
 }
 
-.avatar {
+.avatar,
+.new-members-container img {
   border-radius: 50%;
 }
 
@@ -253,6 +254,36 @@ canvas {
   margin-bottom: -0.75rem;
 }
 
+.new-members-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 14rem;
+  padding: 1.6rem 0;
+  border-bottom: solid #ccc 0.1rem;
+}
+
+.new-members-container:last-of-type {
+  height: 13.05rem;
+  padding: 1.6rem 0 0;
+  border-bottom: unset;
+}
+
+.new-members-container img {
+  width: 6rem;
+}
+
+h3, address, time {
+  font-size: 1.2rem;
+}
+
+address {
+  color: #7477bf;
+}
+
+address a {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 48em) {
