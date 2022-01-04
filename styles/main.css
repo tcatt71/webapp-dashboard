@@ -207,6 +207,10 @@ canvas {
   transition: all 0.15s linear;
 }
 
+.canvas-mobile-users {
+  padding: 0.75rem 0;
+}
+
 @media screen and (min-width: 48em) {
   body {
     grid-template-rows: 7rem 1fr;
