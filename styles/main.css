@@ -243,14 +243,16 @@ canvas {
   justify-content: space-evenly;
 }
 
+.social-company {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
 .followers {
   font-size: 4rem;
   margin-bottom: -0.75rem;
 }
 
-h3 {
-  color: var(--color-secondary);
-  font-weight: 600;
 }
 
 @media screen and (min-width: 48em) {
