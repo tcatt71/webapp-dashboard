@@ -161,20 +161,67 @@
 
       <section class="recent-activity" aria-label="recent activity">
         <h2>Recent Activity</h2>
-        <div>
+
+        <div class="recent-activity-container">
+          <img src="images/member-1.jpg" alt="Victoria Chambers">
+          <p>Victoria Chambers commented on <strong>WebApp's SEO Tips</strong></p>
+          <p>4 hours ago</p>
+        </div>
+
+        <div class="recent-activity-container">
+          <img src="images/member-2.jpg" alt="Dale Byrd">
+          <p>Dale Byrd liked the post <strong>Facebook's Changes for 2021</strong></p>
+          <p>5 hours ago</p>
+        </div>
+
+        <div class="recent-activity-container">
+          <img src="images/member-3.jpg" alt="Dawn Wood">
+          <p>Dawn Wood commented on <strong>Facebook's Changes for 2021</strong></p>
+          <p>5 hours ago</p>
+        </div>
+
+        <div class="recent-activity-container">
+          <img src="images/member-4.jpg" alt="Dan Oliver">
+          <p>Dan Oliver posted <strong>WebApp's SEO Tips</strong></p>
+          <p>1 day ago</p>
         </div>
       </section>
 
-      <section class="message-user">
-        <h2>Message User</h2>
-        <div>
-        </div>
+      <section class="message-user" aria-label="message user">
+        <form action="index.html" method="post">
+          <fieldset>
+            <legend>Message Users</legend>
+
+            <input type="text" aria-label="seach users" placeholder="Search for User">
+            <textarea placeholder="Message for User"></textarea>
+            <button type="submit">send</button>
+          </fieldset>
+        </form>
       </section>
 
-      <section id="settings" class="settings">
-        <h2>Settings</h2>
-        <div>
-        </div>
+      <section id="settings" class="settings" aria-label="settings">
+        <form action="index.html" method="post">
+          <fieldset>
+            <legend>Settings</legend>
+
+            <label for="email-notifications">Send Email Notifications</label>
+            <input type="checkbox" name="reciev-email-notifications" id="email-notifications">
+
+            <label for="public-profile">Set Profile to Public</label>
+            <input type="checkbox" name="set-profile-to-public" id="public-profile">
+
+            <select name="time-zone" aria-label="time-zone">
+              <option value="">Select Time Zone</option>
+              <option value="eastern">Eastern</option>
+              <option value="central">Central</option>
+              <option value="mountain">Mountain</option>
+              <option value="pacific">Pacific</option>
+            </select>
+
+            <button type="submit">save</button>
+            <button type="reset">cancel</button>
+          </fieldset>
+        </form>
       </section>
     </div>
   </main>
