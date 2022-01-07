@@ -227,7 +227,8 @@ canvas {
 }
 
 .social-icon-container {
-  display: flex;
+  display: inline-block;
+  height: 6rem;
   background-color: var(--color-secondary);
   padding:1.5rem;
   border-radius: 50%;
@@ -239,7 +240,7 @@ canvas {
   fill: #fff;
 }
 
-.social-followers {
+.social-followers-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -252,7 +253,7 @@ canvas {
 
 .followers {
   font-size: 4rem;
-  margin-bottom: -0.75rem;
+  margin-bottom: -1rem;
 }
 
 .new-members-container,
