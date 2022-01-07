@@ -81,7 +81,8 @@ img {
 }
 
 .avatar,
-.new-members-container img {
+.new-members-container img,
+.recent-activity-container img {
   border-radius: 50%;
 }
 
@@ -107,7 +108,7 @@ li {
   display: flex;
 }
 
-a {
+li a {
   display: flex;
 }
 
@@ -168,7 +169,8 @@ section {
   border-bottom: solid #ccc 0.1rem;
 }
 
-h2 {
+h2,
+legend {
   font-size: 1.4rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -253,27 +255,26 @@ canvas {
   margin-bottom: -0.75rem;
 }
 
-.new-members-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 14rem;
-  padding: 1.6rem 0;
+.new-members-container,
+.recent-activity-container {
+  text-align: center;
+  line-height: 1.1;
+  padding: 1.5rem 0;
   border-bottom: solid #ccc 0.1rem;
 }
 
-.new-members-container:last-of-type {
-  height: 13.05rem;
-  padding: 1.6rem 0 0;
-  border-bottom: unset;
+.new-members-container:last-of-type,
+.recent-activity-container:last-of-type {
+  padding: 1.5rem 0 0;
+  border-bottom: none;
 }
 
-.new-members-container img {
+.new-members-container img,
+.recent-activity-container img {
   width: 6rem;
 }
 
-h3, address, time {
+.new-members-container {
   font-size: 1.2rem;
 }
 
@@ -283,6 +284,10 @@ address {
 
 address a {
   text-decoration: none;
+}
+
+.recent-activity-container {
+  font-size: 1.3rem;
 }
 
 @media screen and (min-width: 48em) {
