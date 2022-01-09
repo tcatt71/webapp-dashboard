@@ -222,24 +222,33 @@ canvas {
   padding: 0.75rem 0;
 }
 
+.social-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.6rem 0;
+}
+
+.socials-boxes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.6rem 0;
+}
+
 .socials-box {
   display: flex;
   background-color: #f5f5f5;
   padding: 1.5rem 0;
   border: solid #ccc 0.1rem;
   border-radius: 0.5rem;
-  margin-top: 1.6rem;
-}
-
-.socials-box:first-of-type {
-  margin-top: 1.25rem;
 }
 
 .social-icon-container {
   display: inline-block;
   height: 6rem;
   background-color: var(--color-secondary);
-  padding:1.5rem;
+  padding: 1.5rem;
   border-radius: 50%;
   margin: 0 1.5rem;
 }
