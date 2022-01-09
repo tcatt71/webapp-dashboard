@@ -205,13 +205,29 @@
           <fieldset>
             <legend>Settings</legend>
 
-            <label for="email-notifications">Send Email Notifications</label>
-            <input type="checkbox" name="reciev-email-notifications" id="email-notifications">
+            <label class="switch-ios switch-light" name="recieve-email-notifications" onclick="">
+              <input type="checkbox" checked>
 
-            <label for="public-profile">Set Profile to Public</label>
-            <input type="checkbox" name="set-profile-to-public" id="public-profile">
+              <p>Send Email Notifications</p>
+              <span>
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+            </label>
 
-            <select name="time-zone" aria-label="time zone">
+            <label class="switch-ios switch-light" name="set-profile-to-public" onclick="">
+              <input type="checkbox" checked>
+
+              <p>Set Profile to Public</p>
+              <span>
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+            </label>
+
+            <select name="time-zone" aria-label="time zone" required>
               <option value="">Select Time Zone</option>
               <option value="eastern">Eastern</option>
               <option value="central">Central</option>
@@ -219,8 +235,10 @@
               <option value="pacific">Pacific</option>
             </select>
 
-            <button type="submit">save</button>
-            <button type="reset">cancel</button>
+            <div class="settings-buttons-container">
+              <button class="btn-save" type="submit">save</button>
+              <button class="btn-cancel" type="reset">cancel</button>
+            </div>
           </fieldset>
         </form>
       </section>
