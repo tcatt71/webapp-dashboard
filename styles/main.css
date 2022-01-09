@@ -523,6 +523,29 @@ select:invalid {
     width: 50%;
     border-left: solid #ccc 0.1rem;
   }
+
+  .socials-boxes-container {
+    flex-direction: row;
+    gap: 0 1.6rem;
+  }
+
+  .socials-box {
+    flex-grow: 1;
+  }
+
+  .new-members-container {
+    display: flex;
+    align-items: center;
+    gap: 0 1.6rem;
+  }
+
+  .name-and-email-container {
+    text-align: left;
+  }
+
+  .new-members-container :last-child {
+    margin-left: auto;
+  }
 }
 
 @media screen and (min-width: 64em) {
