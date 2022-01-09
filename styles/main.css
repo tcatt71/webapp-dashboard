@@ -536,18 +536,25 @@ select:invalid {
     flex-grow: 1;
   }
 
-  .new-members-container {
+  .new-members-container,
+  .recent-activity-container {
     display: flex;
     align-items: center;
-    gap: 0 1.6rem;
+    gap: 0 1.5rem;
   }
 
-  .name-and-email-container {
+  .name-and-email-container,
+  .comment-and-time-lapse-container {
     text-align: left;
   }
 
-  .new-members-container :last-child {
+  .new-members-container :last-child,
+  .recent-activity-container :last-child {
     margin-left: auto;
+  }
+
+  .greater-than-symbol {
+    font-size: 2rem;
   }
 }
 
