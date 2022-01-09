@@ -320,6 +320,11 @@ textarea {
   padding: 1rem;
 }
 
+::placeholder {
+  color: #bcbcbc;
+  font-size: 1.4rem;
+}
+
 .message-user button {
   color: #fff;
   background-color: var(--color-secondary);
