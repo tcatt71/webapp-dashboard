@@ -363,7 +363,6 @@ textarea {
   color: #fff;
   background-color: var(--color-secondary);
   text-transform: uppercase;
-  border: none;
   margin-bottom: 0;
 }
 
@@ -470,7 +469,6 @@ select:invalid {
   width: 50%;
   color: #fff;
   text-transform: uppercase;
-  border: none;
   margin: 0;
 }
 
