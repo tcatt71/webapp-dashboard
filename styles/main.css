@@ -370,7 +370,9 @@ textarea {
   max-width: 28.8rem;
 }
 
-.settings select,
+.settings select {
+  height: 4.5rem;
+}
 .settings button {
   height: 4.5rem;
 }
