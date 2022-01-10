@@ -19,6 +19,10 @@ body {
   font-weight: 200;
 }
 
+textarea {
+  max-height: 13.75rem;
+}
+
 button,
 input,
 textarea,
