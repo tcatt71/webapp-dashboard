@@ -325,7 +325,9 @@ textarea {
   width: 100%;
 }
 
-.message-user input,
+.message-user input {
+  height: 4.5rem;
+}
 button {
   height: 4.25rem;
 }
@@ -342,8 +344,10 @@ textarea {
   padding-left: 1rem;
 }
 
+input,
 textarea {
   padding: 1rem;
+  font-size: 1.4rem;
 }
 
 ::placeholder {
