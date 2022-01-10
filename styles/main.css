@@ -313,6 +313,11 @@ address a {
   font-size: 1.3rem;
 }
 
+.greater-than-symbol {
+  display: none;
+  font-size: 2rem;
+}
+
 .message-user input,
 .message-user button,
 textarea {
@@ -554,7 +559,8 @@ select:invalid {
   }
 
   .greater-than-symbol {
-    font-size: 2rem;
+    display: block;
+    /* font-size: 2rem; */
   }
 }
 
