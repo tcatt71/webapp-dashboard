@@ -437,9 +437,8 @@ span span {
 }
 
 .switch-ios.switch-light input:checked ~ span a {
-  left: 93%;
+  left: 90%;
   border-color: #c0c0c0;
-  margin-left: -2rem;
 }
 
 .email-notifications-container,
