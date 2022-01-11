@@ -275,12 +275,20 @@ nav img {
   padding: 0.8rem 1rem;
   border-radius: 1.8rem;
   cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+li:hover {
+  transform: scale(1.1);
 }
 
 .traffic-nav-selected {
   color: #fff;
   background-color: #81c98f;
-  transition: all 0.15s linear;
+}
+
+li.traffic-nav-selected:hover {
+  transform: none;
 }
 
 /* ====================================
