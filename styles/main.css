@@ -43,6 +43,10 @@ strong {
   font-weight: 400;
 }
 
+::placeholder {
+  color: #bcbcbc;
+}
+
 img {
   width: 6rem;
   border-radius: 50%;
@@ -430,10 +434,6 @@ textarea {
 
 .message-user input {
   padding-left: 1rem;
-}
-
-::placeholder {
-  color: #bcbcbc;
 }
 
 .message-user button {
