@@ -55,6 +55,8 @@ img {
   border-radius: 50%;
 }
 
+/* --------- Modules --------------- */
+
 section {
   padding: 1.6rem;
   border-bottom: solid #ccc 0.1rem;
@@ -64,6 +66,8 @@ canvas {
   max-width: 100%;
   margin-top: 2rem;
 }
+
+/* --------- Form Controls ---------- */
 
 button,
 input,
