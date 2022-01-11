@@ -545,14 +545,14 @@ span span {
 
   nav {
     flex-direction: column;
-    width: unset;
-    height: 20rem;
-    margin-top: 2rem;
+    justify-content: flex-start;
   }
 
   nav ul {
     flex-direction: column;
-    justify-content: flex-start;
+    width: unset;
+    height: 20rem;
+    margin-top: 2rem;
   }
 
   .alerts-bar {
