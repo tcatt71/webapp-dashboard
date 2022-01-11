@@ -438,6 +438,8 @@ textarea {
   max-width: 28.8rem;
 }
 
+/* ---------- Modified Switch Light rulesets ---------- */
+
 .switch-light {
   display: flex;
   justify-content: space-between;
@@ -497,6 +499,8 @@ span span {
   left: 90%;
   border-color: #c0c0c0;
 }
+
+/* --------- End of Modified Switch Light rulesets --------- */
 
 .email-notifications-container,
 .public-profile-container {
