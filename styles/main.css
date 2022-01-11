@@ -181,14 +181,10 @@ header img {
            Main Navigation
 ==================================== */
 
-.main-nav {
+nav ul {
   display: flex;
   justify-content: space-between;
   width: 21rem;
-}
-
-.main-nav img {
-  border-radius: unset;
 }
 
 li {
@@ -201,6 +197,7 @@ li a {
 
 nav img {
   width: 3rem;
+  border-radius: unset;
 }
 
 /* ====================================
@@ -546,14 +543,14 @@ span span {
       "nav main";
   }
 
-  .main-nav {
+  nav {
     flex-direction: column;
     width: unset;
     height: 20rem;
     margin-top: 2rem;
   }
 
-  nav {
+  nav ul {
     flex-direction: column;
     justify-content: flex-start;
   }
