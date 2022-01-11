@@ -118,7 +118,7 @@ closeAlertButton.addEventListener('click', () => {
 });
 
 bellIcon.addEventListener('mouseover', () => {
-  notificationsLight.style.transform = 'scale(1.3)';
+  notificationsLight.style.transform = 'scale(1.45)';
 });
 
 bellIcon.addEventListener('mouseout', () => {
