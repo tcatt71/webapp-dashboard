@@ -585,10 +585,12 @@ span span {
   }
 
   nav ul {
+    position: sticky;
+    top: 0;
     flex-direction: column;
     width: unset;
     height: 20rem;
-    margin-top: 2rem;
+    padding-top: 2rem;
   }
 
   .alerts-bar {
