@@ -414,6 +414,7 @@ li.traffic-nav-selected:hover {
 .greater-than-symbol {
   display: none;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 /* ====================================
