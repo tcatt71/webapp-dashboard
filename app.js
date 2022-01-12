@@ -113,7 +113,7 @@ new Chart(dailyTrafficCanvas, dailyTrafficConfig);
 new Chart(mobileUsersCanvas, mobileUsersConfig);
 
 closeAlertButton.addEventListener('click', () => {
-  const alert = document.querySelector('.js-alerts-bar');
+  const alert = document.querySelector('.js-hide');
   alert.style.display = 'none';
 });
 
