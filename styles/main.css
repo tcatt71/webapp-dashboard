@@ -487,6 +487,11 @@ textarea {
   height: 3.7rem;
   background-color: #999999;
   border: 0.25rem solid #c0c0c0;
+  transition: all 0.1s linear;
+}
+
+.switch-ios.switch-light > span:hover {
+  background-color: var(--color-btn-cancel-hover);
 }
 
 .switch-ios.switch-light > span span {
@@ -520,6 +525,10 @@ span span {
 .switch-ios.switch-light input:checked ~ span {
   border-color: #c0c0c0;
   box-shadow: inset 0 0 0 30px var(--color-secondary);
+}
+
+.switch-ios.switch-light input:checked ~ span:hover {
+  box-shadow: inset 0 0 0 30px var(--color-secondary-hover);
 }
 
 .switch-ios.switch-light input:checked ~ span a {
