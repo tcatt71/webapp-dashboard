@@ -206,8 +206,7 @@ header img {
 
 nav ul {
   display: flex;
-  justify-content: space-between;
-  width: 21rem;
+  gap: 0 3rem;
 }
 
 li {
