@@ -5,6 +5,7 @@ const trafficNavigation = document.querySelector('.js-traffic-nav');
 const trafficCanvas = document.querySelector('#js-traffic-chart');
 const dailyTrafficCanvas = document.querySelector('#js-daily-traffic-chart');
 const mobileUsersCanvas = document.querySelector('.js-mobile-users');
+const bellWrapper = document.querySelector('.js-bell-wrapper');
 
 trafficNavigation.addEventListener('click', (e) => {
   const trafficNavOptions = document.querySelectorAll('.js-traffic-nav li');
@@ -117,10 +118,12 @@ closeAlertButton.addEventListener('click', () => {
   alert.style.display = 'none';
 });
 
-bellIcon.addEventListener('mouseover', () => {
-  notificationsLight.style.transform = 'scale(1.45)';
-});
-
-bellIcon.addEventListener('mouseout', () => {
-  notificationsLight.style.transform = 'unset';
+bellWrapper.addEventListener('click', () => {
+  const header = document.querySelector('.js-header');
+  const dropDownMenu = `<ul>
+                          <li><div></div><p>You have 6 unread messages</p><p>x</p></li>
+                          <li><div></div><p>You have 3 new followers</p><p>x</p></li>
+                          <li><div></div><p>Your password expires in 7 days</p><p>x</p></li>
+                        </ul>`;
+  header.insertAdjacentHTML('afterbegin', dropDownMenu);
 });
