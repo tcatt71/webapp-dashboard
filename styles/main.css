@@ -124,13 +124,13 @@ img {
   width: 3.5rem;
 }
 
-nav img {
+.nav-main img {
   width: 3rem;
   border-radius: unset;
   transition: var(--transition);
 }
 
-nav img:hover {
+.nav-main img:hover {
   transform: scale(1.05);
 }
 
@@ -287,7 +287,7 @@ nav {
   background-color: #4d4c72;
 }
 
-nav ul {
+.nav-main {
   display: flex;
   gap: 0 3rem;
 }
