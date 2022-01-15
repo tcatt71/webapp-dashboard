@@ -126,7 +126,7 @@ img {
 
 .nav-main img {
   width: 3rem;
-  border-radius: unset;
+  border-radius: 0;
   transition: var(--transition);
 }
 
