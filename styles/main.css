@@ -552,7 +552,7 @@ span span {
     justify-content: flex-start;
   }
 
-  nav ul {
+  .nav-main {
     position: sticky;
     top: 0;
     flex-direction: column;
