@@ -399,7 +399,7 @@ section {
 
 /* ------------- Header ------------- */
 
-header {
+.header-main {
   grid-area: header;
   display: flex;
   gap: 0 1rem;
