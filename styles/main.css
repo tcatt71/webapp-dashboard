@@ -105,7 +105,7 @@ button:hover {
 
 .btn-cancel {
   width: 50%;
-  background-color: #999999;
+  background-color: var(--clr-btn-cancel);
   transition: var(--transition);
 }
 
