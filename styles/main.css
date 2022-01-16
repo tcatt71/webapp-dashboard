@@ -221,6 +221,12 @@ img {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.btn-close:hover {
+  background-color: hsl(0, 37%, 60%);
 }
 
 .traffic-nav {
