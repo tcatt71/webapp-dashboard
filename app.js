@@ -1,4 +1,4 @@
-const closeAlertButton = document.querySelector('.js-close-button');
+const closeAlertButton = document.querySelector('.js-btn-close');
 const notificationsLight = document.querySelector('.js-notifications-light');
 const bellIcon = document.querySelector('.js-bell');
 const trafficNavigation = document.querySelector('.js-traffic-nav');
