@@ -125,5 +125,5 @@ bellWrapper.addEventListener('click', () => {
                           <li><div></div><p>You have 3 new followers</p><p>x</p></li>
                           <li><div></div><p>Your password expires in 7 days</p><p>x</p></li>
                         </ul>`;
-  header.insertAdjacentHTML('afterbegin', dropDownMenu);
+  header.insertAdjacentHTML('afterbegin', dropdownMenu);
 });
