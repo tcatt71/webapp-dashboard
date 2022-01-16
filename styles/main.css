@@ -432,6 +432,7 @@ input {
   border: var(--border);
   border-radius: 0.5rem;
   margin: 1.6rem 0;
+  transition: var(--transition);
 }
 
 .message-user input {
@@ -449,6 +450,7 @@ textarea {
   border: var(--border);
   border-radius: 0.5rem;
   margin: 1.6rem 0;
+  transition: var(--transition);
 }
 
 select {
@@ -459,6 +461,13 @@ select {
   border: var(--border);
   border-radius: 0.5rem;
   margin: 1.6rem 0;
+  transition: var(--transition);
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: var(--clr-secondary-hover);
 }
 
 select:invalid {
