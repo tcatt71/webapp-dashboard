@@ -155,7 +155,9 @@ bellWrapper.addEventListener('click', () => {
         }
       });
     }
-    headerDropdownMenu.style.height = 'initial';
+    const dropdownMenuLIHeight = 4.1;
+    let dropdownMenuHeight = dropdownMenuLIHeight * notifications.length;
+    headerDropdownMenu.style.height = `${dropdownMenuHeight}rem`;
   }
 });
 
