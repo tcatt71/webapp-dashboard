@@ -117,6 +117,11 @@ closeAlertButton.addEventListener('click', () => {
   const alert = document.querySelector('.js-hide');
   alert.style.display = 'none';
 });
+function removeParentElement(event) {
+  const parentElementOfTarget = event.target.parentElement;
+  parentElementOfTarget.parentElement.removeChild(parentElementOfTarget);
+}
+
 
 bellWrapper.addEventListener('click', () => {
   const header = document.querySelector('.js-header');
