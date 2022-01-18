@@ -243,7 +243,7 @@ img {
   transition: var(--transition);
 }
 
-li:hover {
+.traffic-nav li:hover {
   transform: scale(1.1);
 }
 
