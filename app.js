@@ -4,17 +4,6 @@ const trafficCanvas = document.querySelector('#js-traffic-chart');
 const dailyTrafficCanvas = document.querySelector('#js-daily-traffic-chart');
 const mobileUsersCanvas = document.querySelector('.js-mobile-users');
 const bellWrapper = document.querySelector('.js-bell-wrapper');
-
-trafficNavigation.addEventListener('click', (e) => {
-  const trafficNavOptions = document.querySelectorAll('.js-traffic-nav li');
-  const navOption = e.target;
-
-  for (const item of trafficNavOptions) {
-    item.classList.remove('traffic-nav-selected');
-  }
-
-  navOption.classList.add('traffic-nav-selected');
-});
 let dropdownMenuIsOpen = false;
 const notifications = [
   `<li>
@@ -169,4 +158,14 @@ bellWrapper.addEventListener('click', () => {
     headerDropdownMenu.style.height = 'initial';
   }
 });
+
+trafficNavigation.addEventListener('click', (e) => {
+  const trafficNavOptions = document.querySelectorAll('.js-traffic-nav li');
+  const navOption = e.target;
+
+  for (const item of trafficNavOptions) {
+    item.classList.remove('traffic-nav-selected');
+  }
+
+  navOption.classList.add('traffic-nav-selected');
 });
