@@ -1,6 +1,6 @@
-const closeAlertButton = document.querySelector('.js-btn-close');
 const notificationsLight = document.querySelector('.js-notifications-light');
 const bellIcon = document.querySelector('.js-bell');
+const closeButton = document.querySelector('.js-btn-close');
 const trafficNavigation = document.querySelector('.js-traffic-nav');
 const trafficCanvas = document.querySelector('#js-traffic-chart');
 const dailyTrafficCanvas = document.querySelector('#js-daily-traffic-chart');
