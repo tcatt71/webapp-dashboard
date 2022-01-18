@@ -1,4 +1,3 @@
-const notificationsLight = document.querySelector('.js-notifications-light');
 const closeButton = document.querySelector('.js-btn-close');
 const trafficNavigation = document.querySelector('.js-traffic-nav');
 const trafficCanvas = document.querySelector('#js-traffic-chart');
@@ -16,6 +15,24 @@ trafficNavigation.addEventListener('click', (e) => {
 
   navOption.classList.add('traffic-nav-selected');
 });
+let dropdownMenuIsOpen = false;
+const notifications = [
+  `<li>
+     <div class="notification-light"></div>
+     <p>You have 6 unread messages</p>
+     <p class="btn-close js-btn-close">x</p>
+   </li>`,
+  `<li>
+     <div class="notification-light"></div>
+     <p>You have 3 new followers</p>
+     <p class="btn-close js-btn-close">x</p>
+   </li>`,
+  `<li>
+     <div class="notification-light"></div>
+     <p>Your password expires in 7 days</p>
+     <p class="btn-close js-btn-close">x</p>
+   </li>`
+];
 
 const trafficLabels = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31',];
 
@@ -120,11 +137,36 @@ function removeParentElement(event) {
 closeButton.addEventListener('click', removeParentElement);
 
 bellWrapper.addEventListener('click', () => {
-  const header = document.querySelector('.js-header');
-  const dropDownMenu = `<ul>
-                          <li><div></div><p>You have 6 unread messages</p><p>x</p></li>
-                          <li><div></div><p>You have 3 new followers</p><p>x</p></li>
-                          <li><div></div><p>Your password expires in 7 days</p><p>x</p></li>
-                        </ul>`;
-  header.insertAdjacentHTML('afterbegin', dropdownMenu);
+  if (!dropdownMenuIsOpen) {
+    let headerDropdownMenu = document.querySelector('.js-header-dropdown-menu');
+    const notificationsLight = document.querySelector('.js-notifications-light');
+    const alerts = notifications.join('');
+
+    headerDropdownMenu.insertAdjacentHTML('afterbegin', alerts);
+    dropdownMenuIsOpen = true;
+
+    let messageCloseButtons = document.querySelectorAll('.js-header-dropdown-menu .js-btn-close');
+
+    for (const closeButton of messageCloseButtons) {
+      closeButton.addEventListener('click', (e) => {
+        const message = e.target.parentElement.firstElementChild.nextElementSibling.textContent;
+
+        for (const notification of notifications) {
+          if (notification.includes(message)) {
+            let index = notifications.indexOf(notification);
+            notifications.splice(index, 1);
+          }
+        }
+        removeParentElement(e);
+
+        const li = document.querySelector('.js-header-dropdown-menu li');
+
+        if (!headerDropdownMenu.contains(li)) {
+          notificationsLight.parentElement.removeChild(notificationsLight);
+        }
+      });
+    }
+    headerDropdownMenu.style.height = 'initial';
+  }
+});
 });
