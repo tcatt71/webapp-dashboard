@@ -218,8 +218,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   cursor: pointer;
   border-radius: 0.5rem;
   transition: var(--transition);
