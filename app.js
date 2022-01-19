@@ -183,17 +183,17 @@ function highlightSelectedTrafficNav(event) {
 
 trafficNavigation.addEventListener('click', highlightSelectedTrafficNav);
 
-function hideDropDownMenu() {
+function hideDropDownMenu(event) {
   const bell = document.querySelector('.js-bell');
   const bellWrapper = document.querySelector('.js-bell-wrapper');
   const notificationsLight = document.querySelector('.js-notifications-light');
 
-  if (e.target != headerDropdownMenu &&
-    e.target != bellWrapper &&
-    e.target != notificationsLight &&
-    e.target != bell &&
-    (!e.target.classList.contains('js-btn-close')) &&
-    (!e.target.classList.contains('js-notification-text'))) {
+  if (event.target != headerDropdownMenu &&
+    event.target != bellWrapper &&
+    event.target != notificationsLight &&
+    event.target != bell &&
+    (!event.target.classList.contains('js-btn-close')) &&
+    (!event.target.classList.contains('js-notification-text'))) {
     headerDropdownMenu.style.height = '0';
     headerDropdownMenu.style.visibility = 'hidden';
   }
