@@ -3,22 +3,24 @@ const trafficNavigation = document.querySelector('.js-traffic-nav');
 const trafficCanvas = document.querySelector('#js-traffic-chart');
 const dailyTrafficCanvas = document.querySelector('#js-daily-traffic-chart');
 const mobileUsersCanvas = document.querySelector('.js-mobile-users');
+let headerDropdownMenu = document.querySelector('.js-header-dropdown-menu');
 const bellWrapper = document.querySelector('.js-bell-wrapper');
-let dropdownMenuIsOpen = false;
+const bodyOfDocument = document.querySelector('body');
+let dropdownMenuIsVisible = false;
 const notifications = [
   `<li>
      <div class="notification-light"></div>
-     <p>You have 6 unread messages</p>
+     <p class="js-notification-text">You have 6 unread messages</p>
      <p class="btn-close js-btn-close">x</p>
    </li>`,
   `<li>
      <div class="notification-light"></div>
-     <p>You have 3 new followers</p>
+     <p class="js-notification-text">You have 3 new followers</p>
      <p class="btn-close js-btn-close">x</p>
    </li>`,
   `<li>
      <div class="notification-light"></div>
-     <p>Your password expires in 7 days</p>
+     <p class="js-notification-text">Your password expires in 7 days</p>
      <p class="btn-close js-btn-close">x</p>
    </li>`
 ];
@@ -125,40 +127,47 @@ function removeParentElement(event) {
 
 closeButton.addEventListener('click', removeParentElement);
 
-bellWrapper.addEventListener('click', () => {
-  if (!dropdownMenuIsOpen) {
-    let headerDropdownMenu = document.querySelector('.js-header-dropdown-menu');
-    const notificationsLight = document.querySelector('.js-notifications-light');
-    const alerts = notifications.join('');
+function calculateDropdownMenuHeight() {
+  const dropdownMenuLIHeight = 4.1;
+  let dropdownMenuHeight = dropdownMenuLIHeight * notifications.length;
+  headerDropdownMenu.style.height = `${dropdownMenuHeight}rem`;
+}
 
-    headerDropdownMenu.insertAdjacentHTML('afterbegin', alerts);
-    dropdownMenuIsOpen = true;
+function createDropdownMenuContent() {
+  const alerts = notifications.join('');
+  headerDropdownMenu.insertAdjacentHTML('afterbegin', alerts);
+}
 
-    let messageCloseButtons = document.querySelectorAll('.js-header-dropdown-menu .js-btn-close');
+function addEventListenersToNotificationCloseButtons() {
+  const notificationsLight = document.querySelector('.js-notifications-light');
+  let notificationCloseButtons = document.querySelectorAll('.js-header-dropdown-menu .js-btn-close');
+  for (const closeButton of notificationCloseButtons) {
+    closeButton.addEventListener('click', (e) => {
+      const message = e.target.parentElement.firstElementChild.nextElementSibling.textContent;
 
-    for (const closeButton of messageCloseButtons) {
-      closeButton.addEventListener('click', (e) => {
-        const message = e.target.parentElement.firstElementChild.nextElementSibling.textContent;
-
-        for (const notification of notifications) {
-          if (notification.includes(message)) {
-            let index = notifications.indexOf(notification);
-            notifications.splice(index, 1);
-          }
+      for (const notification of notifications) {
+        if (notification.includes(message)) {
+          let index = notifications.indexOf(notification);
+          notifications.splice(index, 1);
         }
-        removeParentElement(e);
+      }
+      removeParentElement(e);
 
-        const li = document.querySelector('.js-header-dropdown-menu li');
+      const li = document.querySelector('.js-header-dropdown-menu li');
 
-        if (!headerDropdownMenu.contains(li)) {
-          notificationsLight.parentElement.removeChild(notificationsLight);
-        }
-      });
-    }
-    const dropdownMenuLIHeight = 4.1;
-    let dropdownMenuHeight = dropdownMenuLIHeight * notifications.length;
-    headerDropdownMenu.style.height = `${dropdownMenuHeight}rem`;
+      if (!headerDropdownMenu.contains(li)) {
+        notificationsLight.parentElement.removeChild(notificationsLight);
+      }
+    });
   }
+}
+
+createDropdownMenuContent();
+addEventListenersToNotificationCloseButtons();
+
+bellWrapper.addEventListener('click', () => {
+  calculateDropdownMenuHeight();
+  headerDropdownMenu.style.visibility = 'visible';
 });
 
 trafficNavigation.addEventListener('click', (e) => {
