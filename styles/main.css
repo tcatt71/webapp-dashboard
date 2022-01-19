@@ -184,7 +184,7 @@ img {
   overflow: hidden;
   z-index: 1;
   height: 0;
-  transition: all 0.4s linear;
+  transition: all 0.3s linear;
 }
 
 .dropdown-menu li {
