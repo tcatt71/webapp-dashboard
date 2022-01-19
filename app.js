@@ -170,16 +170,19 @@ bellWrapper.addEventListener('click', () => {
   headerDropdownMenu.style.visibility = 'visible';
 });
 
-trafficNavigation.addEventListener('click', (e) => {
+function highlightSelectedTrafficNav(event) {
   const trafficNavOptions = document.querySelectorAll('.js-traffic-nav li');
-  const navOption = e.target;
+  const navOption = event.target;
 
   for (const item of trafficNavOptions) {
     item.classList.remove('traffic-nav-selected');
   }
 
   navOption.classList.add('traffic-nav-selected');
-});}
+}
+
+trafficNavigation.addEventListener('click', highlightSelectedTrafficNav);
+
 function hideDropDownMenu() {
   const bell = document.querySelector('.js-bell');
   const bellWrapper = document.querySelector('.js-bell-wrapper');
