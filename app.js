@@ -179,4 +179,21 @@ trafficNavigation.addEventListener('click', (e) => {
   }
 
   navOption.classList.add('traffic-nav-selected');
-});
+});}
+function hideDropDownMenu() {
+  const bell = document.querySelector('.js-bell');
+  const bellWrapper = document.querySelector('.js-bell-wrapper');
+  const notificationsLight = document.querySelector('.js-notifications-light');
+
+  if (e.target != headerDropdownMenu &&
+    e.target != bellWrapper &&
+    e.target != notificationsLight &&
+    e.target != bell &&
+    (!e.target.classList.contains('js-btn-close')) &&
+    (!e.target.classList.contains('js-notification-text'))) {
+    headerDropdownMenu.style.height = '0';
+    headerDropdownMenu.style.visibility = 'hidden';
+  }
+}
+
+bodyOfDocument.addEventListener('click', hideDropDownMenu);
