@@ -11,17 +11,17 @@ const notifications = [
   `<li>
      <div class="notification-light"></div>
      <p class="js-notification-text">You have 6 unread messages</p>
-     <p class="btn-close js-btn-close">x</p>
+     <button type="button" class="btn-close js-btn-close">x</button>
    </li>`,
   `<li>
      <div class="notification-light"></div>
      <p class="js-notification-text">You have 3 new followers</p>
-     <p class="btn-close js-btn-close">x</p>
+     <button type="button" class="btn-close js-btn-close">x</button>
    </li>`,
   `<li>
      <div class="notification-light"></div>
      <p class="js-notification-text">Your password expires in 7 days</p>
-     <p class="btn-close js-btn-close">x</p>
+     <button type="button" class="btn-close js-btn-close">x</button>
    </li>`
 ];
 
