@@ -156,7 +156,7 @@ function addEventListenersToNotificationCloseButtons() {
       const li = document.querySelector('.js-header-dropdown-menu li');
 
       if (!headerDropdownMenu.contains(li)) {
-        notificationsLight.parentElement.removeChild(notificationsLight);
+        notificationsLight.style.display = 'none';
       }
     });
   }
