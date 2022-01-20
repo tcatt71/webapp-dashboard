@@ -120,12 +120,11 @@ new Chart(trafficCanvas, trafficConfig);
 new Chart(dailyTrafficCanvas, dailyTrafficConfig);
 new Chart(mobileUsersCanvas, mobileUsersConfig);
 
-function removeParentElement(event) {
-  const parentElementOfTarget = event.target.parentElement;
+closeButton.addEventListener('click', (e) => {
+  const parentElementOfTarget = e.target.parentElement;
   parentElementOfTarget.parentElement.removeChild(parentElementOfTarget);
-}
+});
 
-closeButton.addEventListener('click', removeParentElement);
 
 function calculateDropdownMenuHeight() {
   const dropdownMenuLIHeight = 4.1;
@@ -139,11 +138,14 @@ function createDropdownMenuContent() {
 }
 
 function addEventListenersToNotificationCloseButtons() {
-  const notificationsLight = document.querySelector('.js-notifications-light');
   let notificationCloseButtons = document.querySelectorAll('.js-header-dropdown-menu .js-btn-close');
-  for (const closeButton of notificationCloseButtons) {
-    closeButton.addEventListener('click', (e) => {
+
+  for (const notificationCloseButton of notificationCloseButtons) {
+    notificationCloseButton.addEventListener('click', (e) => {
       const message = e.target.parentElement.firstElementChild.nextElementSibling.textContent;
+      const li = document.querySelector('.js-header-dropdown-menu li');
+      const notificationsLight = document.querySelector('.js-notifications-light');
+      const parentElementOfTarget = e.target.parentElement;
 
       for (const notification of notifications) {
         if (notification.includes(message)) {
@@ -151,9 +153,9 @@ function addEventListenersToNotificationCloseButtons() {
           notifications.splice(index, 1);
         }
       }
-      removeParentElement(e);
 
-      const li = document.querySelector('.js-header-dropdown-menu li');
+      parentElementOfTarget.parentElement.removeChild(parentElementOfTarget);
+      calculateDropdownMenuHeight();
 
       if (!headerDropdownMenu.contains(li)) {
         notificationsLight.style.display = 'none';
@@ -170,33 +172,28 @@ bellWrapper.addEventListener('click', () => {
   headerDropdownMenu.style.visibility = 'visible';
 });
 
-function highlightSelectedTrafficNav(event) {
+trafficNavigation.addEventListener('click', (e) => {
   const trafficNavOptions = document.querySelectorAll('.js-traffic-nav li');
-  const navOption = event.target;
+  const navOption = e.target;
 
   for (const item of trafficNavOptions) {
     item.classList.remove('traffic-nav-selected');
   }
-
   navOption.classList.add('traffic-nav-selected');
-}
+});
 
-trafficNavigation.addEventListener('click', highlightSelectedTrafficNav);
-
-function hideDropDownMenu(event) {
+bodyOfDocument.addEventListener('click', (e) => {
   const bell = document.querySelector('.js-bell');
   const bellWrapper = document.querySelector('.js-bell-wrapper');
   const notificationsLight = document.querySelector('.js-notifications-light');
 
-  if (event.target != headerDropdownMenu &&
-    event.target != bellWrapper &&
-    event.target != notificationsLight &&
-    event.target != bell &&
-    (!event.target.classList.contains('js-btn-close')) &&
-    (!event.target.classList.contains('js-notification-text'))) {
+  if (e.target != headerDropdownMenu &&
+    e.target != bellWrapper &&
+    e.target != notificationsLight &&
+    e.target != bell &&
+    (!e.target.classList.contains('js-btn-close')) &&
+    (!e.target.classList.contains('js-notification-text'))) {
     headerDropdownMenu.style.height = '0';
     headerDropdownMenu.style.visibility = 'hidden';
   }
-}
-
-bodyOfDocument.addEventListener('click', hideDropDownMenu);
+});
