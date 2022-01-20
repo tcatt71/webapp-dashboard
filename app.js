@@ -143,9 +143,8 @@ function addEventListenersToNotificationCloseButtons() {
   for (const notificationCloseButton of notificationCloseButtons) {
     notificationCloseButton.addEventListener('click', (e) => {
       const message = e.target.parentElement.firstElementChild.nextElementSibling.textContent;
-      const li = document.querySelector('.js-header-dropdown-menu li');
-      const notificationsLight = document.querySelector('.js-notifications-light');
       const parentElementOfTarget = e.target.parentElement;
+      const notificationsLight = document.querySelector('.js-notifications-light');
 
       for (const notification of notifications) {
         if (notification.includes(message)) {
@@ -157,7 +156,7 @@ function addEventListenersToNotificationCloseButtons() {
       parentElementOfTarget.parentElement.removeChild(parentElementOfTarget);
       calculateDropdownMenuHeight();
 
-      if (!headerDropdownMenu.contains(li)) {
+      if (!headerDropdownMenu.hasChildNodes()) {
         notificationsLight.style.display = 'none';
       }
     });
