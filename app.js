@@ -38,7 +38,7 @@ const trafficWeeklyData = {
 
 const trafficConfig = {
   type: 'line',
-  data: trafficData,
+  data: trafficWeeklyData,
   options: {
     fill: true,
     aspectRatio: 2.5,
