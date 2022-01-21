@@ -36,7 +36,7 @@ const trafficWeeklyData = {
   }]
 };
 
-const trafficConfig = {
+const trafficWeeklyConfig = {
   type: 'line',
   data: trafficWeeklyData,
   options: {
@@ -116,7 +116,7 @@ const mobileUsersConfig = {
   }
 };
 
-new Chart(trafficCanvas, trafficConfig);
+new Chart(trafficCanvas, trafficWeeklyConfig);
 new Chart(dailyTrafficCanvas, dailyTrafficConfig);
 new Chart(mobileUsersCanvas, mobileUsersConfig);
 
