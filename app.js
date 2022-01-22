@@ -25,7 +25,7 @@ const notifications = [
    </li>`
 ];
 
-const trafficHourlyLabels = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31',];
+const trafficHourlyLabels = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm',];
 
 const trafficHourlyData = {
   labels: trafficHourlyLabels,
