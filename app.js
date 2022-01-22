@@ -34,7 +34,7 @@ const trafficHourlyLabels = ['10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm',
 const trafficHourlyData = {
   labels: trafficHourlyLabels,
   datasets: [{
-    data: [25, 30,15 ,35 ,20 ,45 ,20 ,15 ,35 ,15 ,20],
+    data: [25, 30, 15, 35, 20, 45, 20, 15, 35, 15, 20],
     backgroundColor: 'rgba(116, 119, 191, .3)',
     borderWidth: 1,
   }]
