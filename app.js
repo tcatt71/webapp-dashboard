@@ -60,6 +60,37 @@ const trafficHourlyConfig = {
   }
 };
 
+const trafficDailyLabels = ['Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+const trafficDailyData = {
+  labels: trafficDailyLabels,
+  datasets: [{
+    data: [125, 350, 300, 150, 250, 450, 300, 250, 400, 350, 200],
+    backgroundColor: 'rgba(116, 119, 191, .3)',
+    borderWidth: 1,
+  }]
+};
+
+const trafficDailyConfig = {
+  type: 'line',
+  data: trafficDailyData,
+  options: {
+    fill: true,
+    aspectRatio: 2.5,
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    },
+    plugins: {
+      legend: {
+        display: false
+      },
+    },
+    tension: .5
+  }
+};
+
 const trafficWeeklyLabels = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31',];
 
 const trafficWeeklyData = {
@@ -159,6 +190,11 @@ let currentChart = new Chart(trafficCanvas, trafficWeeklyConfig);
 trafficNavigationLinkHourly.addEventListener('click', () => {
   currentChart.destroy();
   currentChart = new Chart(trafficCanvas, trafficHourlyConfig);
+});
+
+trafficNavigationLinkDaily.addEventListener('click', () => {
+  currentChart.destroy();
+  currentChart = new Chart(trafficCanvas, trafficDailyConfig);
 });
 
 trafficNavigationLinkWeekly.addEventListener('click', () => {
