@@ -182,6 +182,7 @@ const mobileUsersConfig = {
   }
 };
 
+new Chart(dailyTrafficCanvas, dailyTrafficConfig);
 new Chart(mobileUsersCanvas, mobileUsersConfig);
 
 let currentChart = new Chart(trafficCanvas, trafficWeeklyConfig);
