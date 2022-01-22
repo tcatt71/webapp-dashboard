@@ -156,6 +156,8 @@ new Chart(trafficCanvas, trafficWeeklyConfig);
 new Chart(dailyTrafficCanvas, dailyTrafficConfig);
 new Chart(mobileUsersCanvas, mobileUsersConfig);
 
+let currentChart = new Chart(trafficCanvas, trafficWeeklyConfig);
+
 closeButton.addEventListener('click', (e) => {
   const parentElementOfTarget = e.target.parentElement;
   parentElementOfTarget.parentElement.removeChild(parentElementOfTarget);
