@@ -25,9 +25,9 @@ const notifications = [
    </li>`
 ];
 
-const trafficWeeklyLabels = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31',];
+const trafficHourlyLabels = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31',];
 
-const trafficWeeklyData = {
+const trafficHourlyData = {
   labels: trafficWeeklyLabels,
   datasets: [{
     data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
@@ -36,9 +36,9 @@ const trafficWeeklyData = {
   }]
 };
 
-const trafficWeeklyConfig = {
+const trafficHourlyConfig = {
   type: 'line',
-  data: trafficWeeklyData,
+  data: trafficHourlyData,
   options: {
     fill: true,
     aspectRatio: 2.5,
@@ -147,7 +147,7 @@ const mobileUsersConfig = {
   }
 };
 
-new Chart(trafficCanvas, trafficWeeklyConfig);
+new Chart(trafficCanvas, trafficHourlyConfig);
 new Chart(trafficCanvas, trafficWeeklyConfig);
 new Chart(dailyTrafficCanvas, dailyTrafficConfig);
 new Chart(mobileUsersCanvas, mobileUsersConfig);
