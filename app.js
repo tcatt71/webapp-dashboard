@@ -151,11 +151,15 @@ const mobileUsersConfig = {
   }
 };
 
-new Chart(trafficCanvas, trafficHourlyConfig);
 new Chart(dailyTrafficCanvas, dailyTrafficConfig);
 new Chart(mobileUsersCanvas, mobileUsersConfig);
 
 let currentChart = new Chart(trafficCanvas, trafficWeeklyConfig);
+
+trafficNavigationLinkHourly.addEventListener('click', () => {
+  currentChart.destroy();
+  currentChart = new Chart(trafficCanvas, trafficHourlyConfig);
+});
 
 trafficNavigationLinkWeekly.addEventListener('click', () => {
   currentChart.destroy();
