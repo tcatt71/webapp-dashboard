@@ -243,7 +243,6 @@ closeButton.addEventListener('click', (e) => {
   parentElementOfTarget.parentElement.removeChild(parentElementOfTarget);
 });
 
-
 function calculateDropdownMenuHeight() {
   const dropdownMenuLIHeight = 4.1;
   let dropdownMenuHeight = dropdownMenuLIHeight * notifications.length;
