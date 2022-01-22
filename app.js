@@ -122,6 +122,37 @@ const trafficWeeklyConfig = {
   }
 };
 
+const trafficMonthlyLabels = ['Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+const trafficMonthlyData = {
+  labels: trafficMonthlyLabels,
+  datasets: [{
+    data: [3000, 5000, 4000, 6000, 5000, 7000, 6000, 8000, 7000, 9000, 10000],
+    backgroundColor: 'rgba(116, 119, 191, .3)',
+    borderWidth: 1,
+  }]
+};
+
+const trafficMonthlyConfig = {
+  type: 'line',
+  data: trafficMonthlyData,
+  options: {
+    fill: true,
+    aspectRatio: 2.5,
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    },
+    plugins: {
+      legend: {
+        display: false
+      },
+    },
+    tension: .5
+  }
+};
+
 const dailyTrafficLabels = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
 const dailyTrafficData = {
@@ -200,6 +231,11 @@ trafficNavigationLinkDaily.addEventListener('click', () => {
 trafficNavigationLinkWeekly.addEventListener('click', () => {
   currentChart.destroy();
   currentChart = new Chart(trafficCanvas, trafficWeeklyConfig);
+});
+
+trafficNavigationLinkMonthly.addEventListener('click', () => {
+  currentChart.destroy();
+  currentChart = new Chart(trafficCanvas, trafficMonthlyConfig);
 });
 
 closeButton.addEventListener('click', (e) => {
