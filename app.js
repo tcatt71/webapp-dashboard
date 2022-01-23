@@ -7,10 +7,12 @@ const trafficNavigationLinkWeekly = document.querySelector('.js-traffic-nav-link
 const trafficNavigationLinkMonthly = document.querySelector('.js-traffic-nav-link-monthly');
 const dailyTrafficCanvas = document.querySelector('#js-daily-traffic-chart');
 const mobileUsersCanvas = document.querySelector('.js-mobile-users');
+const searchBox = document.querySelector('.js-search-box');
 let headerDropdownMenu = document.querySelector('.js-header-dropdown-menu');
 const bellWrapper = document.querySelector('.js-bell-wrapper');
 const bodyOfDocument = document.querySelector('body');
 let dropdownMenuIsVisible = false;
+const users = [{ name: 'Victoria Chambers' }, { name: 'Dale Byrd' }, { name: 'Dawn Wood' }, { name: 'Dan Oliver' }];
 const notifications = [
   `<li>
      <div class="notification-light"></div>
@@ -236,6 +238,42 @@ trafficNavigationLinkWeekly.addEventListener('click', () => {
 trafficNavigationLinkMonthly.addEventListener('click', () => {
   currentChart.destroy();
   currentChart = new Chart(trafficCanvas, trafficMonthlyConfig);
+});
+
+searchBox.addEventListener('keyup', () => {
+  let searchStr = searchBox.value;
+  const usersList = document.querySelector('.js-dropdown-menu-message-user');
+
+  function clearNamesList() {
+    while (usersList.firstChild) {
+      usersList.removeChild(usersList.firstChild);
+    }
+  }
+
+  searchStr = searchStr.toLowerCase();
+  clearNamesList();
+
+  if (searchBox.value === '') {
+    return;
+  }
+
+  for (const user of users) {
+    const userName = user.name.toLowerCase();
+
+    if (userName.includes(searchStr)) {
+      const li = document.createElement('LI');
+      li.textContent = user.name;
+
+      li.addEventListener('click', () => {
+        searchBox.value = li.textContent;
+        clearNamesList();
+      });
+
+      usersList.insertAdjacentElement('afterBegin', li);
+    }
+  }
+  usersList.style.height = 'auto';
+  usersList.style.visibility = 'visible';
 });
 
 closeButton.addEventListener('click', (e) => {
