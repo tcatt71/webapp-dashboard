@@ -243,10 +243,10 @@ closeButton.addEventListener('click', (e) => {
   parentElementOfTarget.parentElement.removeChild(parentElementOfTarget);
 });
 
-function calculateDropdownMenuHeight() {
+function calculateDropdownMenuHeight(arr, ul) {
   const dropdownMenuLIHeight = 4.1;
-  let dropdownMenuHeight = dropdownMenuLIHeight * notifications.length;
-  headerDropdownMenu.style.height = `${dropdownMenuHeight}rem`;
+  let dropdownMenuHeight = dropdownMenuLIHeight * arr.length;
+  ul.style.height = `${dropdownMenuHeight}rem`;
 }
 
 function createDropdownMenuContent() {
@@ -271,7 +271,7 @@ function addEventListenersToNotificationCloseButtons() {
       }
 
       parentElementOfTarget.parentElement.removeChild(parentElementOfTarget);
-      calculateDropdownMenuHeight();
+      calculateDropdownMenuHeight(notifications, headerDropdownMenu);
 
       if (!headerDropdownMenu.hasChildNodes()) {
         notificationsLight.style.display = 'none';
@@ -284,7 +284,7 @@ createDropdownMenuContent();
 addEventListenersToNotificationCloseButtons();
 
 bellWrapper.addEventListener('click', () => {
-  calculateDropdownMenuHeight();
+  calculateDropdownMenuHeight(notifications, headerDropdownMenu);
   headerDropdownMenu.style.visibility = 'visible';
 });
 
