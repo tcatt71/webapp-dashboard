@@ -12,6 +12,8 @@ let headerDropdownMenu = document.querySelector('.js-header-dropdown-menu');
 const bellWrapper = document.querySelector('.js-bell-wrapper');
 const bodyOfDocument = document.querySelector('body');
 const sendMessageButton = document.querySelector('.js-btn-message-user');
+const saveButton = document.querySelector('#btnSave');
+const cancelButton = document.querySelector('#btnCancel');
 let dropdownMenuIsVisible = false;
 const users = [{ name: 'Victoria Chambers' }, { name: 'Dale Byrd' }, { name: 'Dawn Wood' }, { name: 'Dan Oliver' }];
 const notifications = [
@@ -351,8 +353,23 @@ bodyOfDocument.addEventListener('click', (e) => {
     headerDropdownMenu.style.height = '0';
     headerDropdownMenu.style.visibility = 'hidden';
   }
+});
+
 sendMessageButton.addEventListener('click', (e) => {
   e.preventDefault();
 });
 
+saveButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  const reciveEmailNotififcations = document.querySelector('#recieveEmailNotifications');
+  const setProfileToPublic = document.querySelector('#setProfileToPublic');
+  const timeZone = document.querySelector('#timeZone');
+
+  localStorage.setItem('recieveEmailNotifications', `${ reciveEmailNotififcations.checked }`);
+  localStorage.setItem('setProfileToPublic', `${ setProfileToPublic.checked }`);
+  localStorage.setItem('timeZone', `${ timeZone.value }`);
+});
+
+cancelButton.addEventListener('click', () => {
+  localStorage.clear();
 });

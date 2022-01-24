@@ -230,7 +230,7 @@
             <legend>Settings</legend>
 
             <label class="switch-ios switch-light" name="recieve-email-notifications" onclick="">
-              <input type="checkbox" checked>
+              <input id="recieveEmailNotifications" type="checkbox" checked>
 
               <p>Send Email Notifications</p>
               <span>
@@ -241,7 +241,7 @@
             </label>
 
             <label class="switch-ios switch-light" name="set-profile-to-public" onclick="">
-              <input type="checkbox" checked>
+              <input id="setProfileToPublic" type="checkbox" checked>
 
               <p>Set Profile to Public</p>
               <span>
@@ -251,7 +251,7 @@
               </span>
             </label>
 
-            <select name="time-zone" aria-label="time zone" required>
+            <select id="timeZone" name="time-zone" aria-label="time zone" required>
               <option value="">Select Time Zone</option>
               <option value="eastern">Eastern</option>
               <option value="central">Central</option>
@@ -260,8 +260,8 @@
             </select>
 
             <div class="settings-buttons-container">
-              <button class="btn-save" type="submit">save</button>
-              <button class="btn-cancel" type="reset">cancel</button>
+              <button id="btnSave" class="btn-save" type="submit">save</button>
+              <button id="btnCancel" class="btn-cancel" type="reset">cancel</button>
             </div>
           </fieldset>
         </form>
