@@ -297,24 +297,30 @@ function createDropdownMenuContent() {
 function addEventListenersToNotificationCloseButtons() {
   let notificationCloseButtons = document.querySelectorAll('.js-header-dropdown-menu .js-btn-close');
 
-  for (const notificationCloseButton of notificationCloseButtons) {
-    notificationCloseButton.addEventListener('click', (e) => {
+  for (const CloseButton of notificationCloseButtons) {
+    CloseButton.addEventListener('click', (e) => {
       const message = e.target.parentElement.firstElementChild.nextElementSibling.textContent;
-      const parentElementOfTarget = e.target.parentElement;
+      const notification = e.target.parentElement;
       const notificationsLight = document.querySelector('.js-notifications-light');
 
-      for (const notification of notifications) {
-        if (notification.includes(message)) {
-          let index = notifications.indexOf(notification);
-          notifications.splice(index, 1);
-        }
-      }
-
-      parentElementOfTarget.parentElement.removeChild(parentElementOfTarget);
+      removeNotificationFromNotificationsArray();
+      removeNotificationFromDropdownMenu();
       calculateDropdownMenuHeight(notifications, headerDropdownMenu);
-
       if (!headerDropdownMenu.hasChildNodes()) {
         notificationsLight.style.display = 'none';
+      }
+
+      function removeNotificationFromDropdownMenu() {
+        notification.parentElement.removeChild(notification);
+      }
+
+      function removeNotificationFromNotificationsArray() {
+        for (const notification of notifications) {
+          if (notification.includes(message)) {
+            let index = notifications.indexOf(notification);
+            notifications.splice(index, 1);
+          }
+        }
       }
     });
   }
