@@ -11,6 +11,7 @@ const searchBox = document.querySelector('.js-search-box');
 let headerDropdownMenu = document.querySelector('.js-header-dropdown-menu');
 const bellWrapper = document.querySelector('.js-bell-wrapper');
 const bodyOfDocument = document.querySelector('body');
+const sendMessageButton = document.querySelector('.js-btn-message-user');
 let dropdownMenuIsVisible = false;
 const users = [{ name: 'Victoria Chambers' }, { name: 'Dale Byrd' }, { name: 'Dawn Wood' }, { name: 'Dan Oliver' }];
 const notifications = [
@@ -350,4 +351,8 @@ bodyOfDocument.addEventListener('click', (e) => {
     headerDropdownMenu.style.height = '0';
     headerDropdownMenu.style.visibility = 'hidden';
   }
+sendMessageButton.addEventListener('click', (e) => {
+  e.preventDefault();
+});
+
 });
