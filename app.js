@@ -321,9 +321,6 @@ function addEventListenersToNotificationCloseButtons() {
   }
 }
 
-createDropdownMenuContent();
-addEventListenersToNotificationCloseButtons();
-
 bellWrapper.addEventListener('click', () => {
   calculateDropdownMenuHeight(notifications, headerDropdownMenu);
   headerDropdownMenu.style.visibility = 'visible';
@@ -373,3 +370,6 @@ saveButton.addEventListener('click', (e) => {
 cancelButton.addEventListener('click', () => {
   localStorage.clear();
 });
+
+createDropdownMenuContent();
+addEventListenersToNotificationCloseButtons();
