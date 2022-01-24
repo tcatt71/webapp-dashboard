@@ -218,9 +218,6 @@ const mobileUsersConfig = {
   }
 };
 
-new Chart(dailyTrafficCanvas, dailyTrafficConfig);
-new Chart(mobileUsersCanvas, mobileUsersConfig);
-
 let currentChart = new Chart(trafficCanvas, trafficWeeklyConfig);
 
 trafficNavigationLinkHourly.addEventListener('click', () => {
@@ -242,6 +239,9 @@ trafficNavigationLinkMonthly.addEventListener('click', () => {
   currentChart.destroy();
   currentChart = new Chart(trafficCanvas, trafficMonthlyConfig);
 });
+
+new Chart(dailyTrafficCanvas, dailyTrafficConfig);
+new Chart(mobileUsersCanvas, mobileUsersConfig);
 
 searchBox.addEventListener('keyup', () => {
   let searchStr = searchBox.value;
