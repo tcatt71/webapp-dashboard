@@ -14,7 +14,6 @@ const bodyOfDocument = document.querySelector('body');
 const sendMessageButton = document.querySelector('.js-btn-message-user');
 const saveButton = document.querySelector('#btnSave');
 const cancelButton = document.querySelector('#btnCancel');
-let dropdownMenuIsVisible = false;
 const users = [{ name: 'Victoria Chambers' }, { name: 'Dale Byrd' }, { name: 'Dawn Wood' }, { name: 'Dan Oliver' }];
 const notifications = [
   `<li>
