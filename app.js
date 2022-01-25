@@ -253,25 +253,29 @@ searchBox.addEventListener('keyup', () => {
   }
 
   searchStr = searchStr.toLowerCase();
-  clearNamesList();
 
-  if (searchBox.value === '') {
-    return;
+  if (searchStr === '') {
+    clearNamesList();
   }
 
-  for (const user of users) {
-    const userName = user.name.toLowerCase();
+  for (let i = 0; i < searchStr.length; i++) {
+    clearNamesList();
 
-    if (userName.includes(searchStr)) {
-      const li = document.createElement('LI');
-      li.textContent = user.name;
+    for (const user of users) {
+      let userName = user.name.toLowerCase();
+      let position = userName.search(searchStr);
 
-      li.addEventListener('click', () => {
-        searchBox.value = li.textContent;
-        clearNamesList();
-      });
+      if (position === 0) {
+        const li = document.createElement('LI');
+        li.textContent = user.name;
 
-      usersList.insertAdjacentElement('afterBegin', li);
+        li.addEventListener('click', () => {
+          searchBox.value = li.textContent;
+          clearNamesList();
+        });
+
+        usersList.insertAdjacentElement('afterBegin', li);
+      }
     }
   }
   usersList.style.height = 'auto';
