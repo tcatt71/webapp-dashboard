@@ -367,9 +367,9 @@ saveButton.addEventListener('click', (e) => {
   const setProfileToPublic = document.querySelector('#setProfileToPublic');
   const timeZone = document.querySelector('#timeZone');
 
-  localStorage.setItem('recieveEmailNotifications', `${ reciveEmailNotififcations.checked }`);
-  localStorage.setItem('setProfileToPublic', `${ setProfileToPublic.checked }`);
-  localStorage.setItem('timeZone', `${ timeZone.value }`);
+  localStorage.setItem('recieveEmailNotifications', `${reciveEmailNotififcations.checked}`);
+  localStorage.setItem('setProfileToPublic', `${setProfileToPublic.checked}`);
+  localStorage.setItem('timeZone', `${timeZone.value}`);
 });
 
 cancelButton.addEventListener('click', () => {
