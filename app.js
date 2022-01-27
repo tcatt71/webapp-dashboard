@@ -11,6 +11,7 @@ const searchBox = document.querySelector('.js-search-box');
 let headerDropdownMenu = document.querySelector('.js-header-dropdown-menu');
 const bellWrapper = document.querySelector('.js-bell-wrapper');
 const bodyOfDocument = document.querySelector('body');
+const messageBox = document.querySelector('.js-message-box');
 const sendMessageButton = document.querySelector('.js-btn-message-user');
 const saveButton = document.querySelector('#btnSave');
 const cancelButton = document.querySelector('#btnCancel');
@@ -272,6 +273,12 @@ searchBox.addEventListener('keyup', () => {
         li.addEventListener('click', () => {
           searchBox.value = li.textContent;
           clearNamesList();
+          searchBox.classList.remove('err-msg-search-box');
+          const srchBoxErrMsg = document.querySelector('.js-err-msg-search-box');
+          const fieldSet = document.querySelector('.message-user-fieldset');
+          if (fieldSet.contains(srchBoxErrMsg)) {
+            fieldSet.removeChild(srchBoxErrMsg);
+          }
         });
 
         usersList.insertAdjacentElement('afterBegin', li);
@@ -363,6 +370,84 @@ bodyOfDocument.addEventListener('click', (e) => {
 
 sendMessageButton.addEventListener('click', (e) => {
   e.preventDefault();
+
+  const searchBox = document.querySelector('.js-search-box');
+  const fieldSet = document.querySelector('.js-message-user-fieldset');
+  const srchBoxErrMsg = document.querySelector('.js-err-msg-search-box');
+  const msgBoxErrMsg = document.querySelector('.js-err-msg-msg-box');
+
+  let searchName = searchBox.value.toLowerCase();
+
+  function searchForUserName() {
+    for (let i = 0; i < users.length; i++) {
+      let userName = users[i].name.toLowerCase();
+      if (searchName === userName) {
+        return userName;
+      }
+    }
+  }
+
+  function createErrorMessage(msg) {
+    const errorMessage = document.createElement('p');
+    errorMessage.textContent = msg;
+    errorMessage.className = 'err-msg';
+    return errorMessage;
+  }
+
+  let userName = searchForUserName();
+
+  if (searchName === userName && (fieldSet.contains(srchBoxErrMsg))) {
+    fieldSet.removeChild(srchBoxErrMsg);
+    searchBox.classList.remove('err-msg-search-box');
+  }
+
+  if (searchName !== userName && (!fieldSet.contains(srchBoxErrMsg))) {
+    const searchBoxErrorMessage = createErrorMessage('Please enter the name of an existing user');
+    searchBoxErrorMessage.className += ' js-err-msg-search-box';
+    fieldSet.insertBefore(searchBoxErrorMessage, messageBox);
+    searchBox.className += ' err-msg-search-box';
+  }
+
+  if (messageBox.value === '' && (!fieldSet.contains(msgBoxErrMsg))) {
+    const messageBoxErrorMessage = createErrorMessage('Please enter a message');
+    messageBoxErrorMessage.className += ' js-err-msg-msg-box';
+    fieldSet.insertBefore(messageBoxErrorMessage, sendMessageButton);
+    messageBox.className += ' err-msg-msg-box';
+  }
+
+  if (messageBox.value !== '') {
+    messageBox.classList.remove('err-msg-msg-box');
+    if (fieldSet.contains(msgBoxErrMsg)) {
+      fieldSet.removeChild(msgBoxErrMsg);
+    }
+  }
+
+  if (searchName === userName && messageBox !== '' &&
+    ((!fieldSet.contains(srchBoxErrMsg)) && (!fieldSet.contains(msgBoxErrMsg)))) {
+    sendMessageButton.textContent = 'message sent';
+  }
+});
+
+messageBox.addEventListener('keyup', () => {
+  const fieldSet = document.querySelector('.js-message-user-fieldset');
+  const msgBoxErrMsg = document.querySelector('.js-err-msg-msg-box');
+
+  messageBox.classList.remove('err-msg-msg-box');
+  if (fieldSet.contains(msgBoxErrMsg)) {
+    fieldSet.removeChild(msgBoxErrMsg);
+  }
+});
+
+searchBox.addEventListener('click', () => {
+  if (sendMessageButton.textContent === 'message sent') {
+    sendMessageButton.textContent = 'send';
+  }
+});
+
+messageBox.addEventListener('click', () => {
+  if (sendMessageButton.textContent === 'message sent') {
+    sendMessageButton.textContent = 'send';
+  }
 });
 
 saveButton.addEventListener('click', (e) => {
