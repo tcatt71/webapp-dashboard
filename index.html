@@ -213,12 +213,12 @@
 
       <section class="message-user" aria-label="message user">
         <form action="index.html" method="post">
-          <fieldset class="message-user-fieldset">
+          <fieldset class="message-user-fieldset js-message-user-fieldset">
             <legend>Message User</legend>
 
-            <input class="js-search-box" type="search" aria-label="seach for users" placeholder="Search for User">
+            <input class="js-search-box" type="search" aria-label="seach for users" placeholder="Search for User" required>
             <ul class="message-user-dropdown-menu dropdown-menu js-dropdown-menu-message-user"></ul>
-            <textarea rows="5" placeholder="Message for User"></textarea>
+            <textarea class="js-message-box" rows="5" placeholder="Message for User" required></textarea>
             <button class="js-btn-message-user" type="submit">send</button>
           </fieldset>
         </form>
