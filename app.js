@@ -15,6 +15,9 @@ const messageBox = document.querySelector('.js-message-box');
 const sendMessageButton = document.querySelector('.js-btn-message-user');
 const saveButton = document.querySelector('#btnSave');
 const cancelButton = document.querySelector('#btnCancel');
+const receiveEmailNotififcations = document.querySelector('#receiveEmailNotifications');
+const setProfileToPublic = document.querySelector('#setProfileToPublic');
+const timeZone = document.querySelector('#timeZone');
 const users = [{ name: 'Victoria Chambers' }, { name: 'Dale Byrd' }, { name: 'Dawn Wood' }, { name: 'Dan Oliver' }];
 const notifications = [
   `<li>
@@ -452,11 +455,8 @@ messageBox.addEventListener('click', () => {
 
 saveButton.addEventListener('click', (e) => {
   e.preventDefault();
-  const reciveEmailNotififcations = document.querySelector('#recieveEmailNotifications');
-  const setProfileToPublic = document.querySelector('#setProfileToPublic');
-  const timeZone = document.querySelector('#timeZone');
 
-  localStorage.setItem('recieveEmailNotifications', `${reciveEmailNotififcations.checked}`);
+  localStorage.setItem('receiveEmailNotififcations', `${receiveEmailNotififcations.checked}`);
   localStorage.setItem('setProfileToPublic', `${setProfileToPublic.checked}`);
   localStorage.setItem('timeZone', `${timeZone.value}`);
 });
@@ -465,5 +465,14 @@ cancelButton.addEventListener('click', () => {
   localStorage.clear();
 });
 
+function loadSettings() {
+  if (localStorage.length > 0) {
+    receiveEmailNotififcations.checked = JSON.parse(localStorage.getItem('receiveEmailNotififcations'));
+    setProfileToPublic.checked = JSON.parse(localStorage.getItem('setProfileToPublic'));
+    timeZone.value = localStorage.getItem('timeZone');
+  }
+}
+
 createDropdownMenuContent();
 addEventListenersToNotificationCloseButtons();
+loadSettings();
